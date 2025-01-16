@@ -16,13 +16,13 @@ app.get("/", (req, res) => {
   res.send("API is running successfully");
 });
 
-app.get("/api/chat", (req, res) => {
-  res.send(chats);
-});
-app.get("/api/chat/:id", (req, res) => {
-  const requestedChat = chats.find((chat) => chat._id === req.params.id);
-  res.send(requestedChat);
-});
+// app.get("/api/chat", (req, res) => {
+//   res.send(chats);
+// });
+// app.get("/api/chat/:id", (req, res) => {
+//   const requestedChat = chats.find((chat) => chat._id === req.params.id);
+//   res.send(requestedChat);
+// });
 
 app.use("/api/user", userRoutes);
 
